@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Presentor;
 
 namespace View
 {
-    public partial class Doctor : Form
+    public partial class Administrator : Form
     {
-        public Doctor()
+        public Administrator()
         {
             InitializeComponent();
+        }
+
+
+        private void Administrator_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

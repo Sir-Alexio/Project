@@ -44,9 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministratorPresentor.cs" />
+    <Compile Include="DoctorPresentor.cs" />
+    <Compile Include="IView.cs" />
     <Compile Include="AuthorizationPresentor.cs" />
-    <Compile Include="IAuthorizationServise.cs" />
-    <Compile Include="IShowView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

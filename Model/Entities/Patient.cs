@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Presentor
+namespace Model.Entities
 {
-    public interface IAuthorizationServise
+    class Patient
     {
     }
 }

@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace Presentor
+namespace Model.Entities
 {
-    public interface IShowView
+    public class Administrator
     {
-        void ShowView(Form form);
     }
 }

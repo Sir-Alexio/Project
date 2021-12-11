@@ -13,7 +13,6 @@ namespace View
 {
     public partial class Authorization : Form
     {
-        private AuthorizationPresentor _presentor = new AuthorizationPresentor(new Form());
 
         public Authorization()
         {
@@ -27,12 +26,16 @@ namespace View
 
         private void Administrator_Click(object sender, EventArgs e)
         {
-            _presentor.ShowView(new Administrator());
+            AdministratorPresentor presentor = new AdministratorPresentor(new Administrator());
+            presentor.ShowView();
         }
 
         private void Doctor_Click(object sender, EventArgs e)
         {
-            _presentor.ShowView(new Doctor());
+            DoctorPresentor presentor = new DoctorPresentor(new Doctor());
+            presentor.ShowView();
+            
         }
+
     }
 }

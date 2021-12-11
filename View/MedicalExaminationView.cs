@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace View
 {
-    public partial class Administrator : Form
+    public partial class MedicalExaminationView : Form
     {
-        public Administrator()
+        public MedicalExaminationView()
         {
             InitializeComponent();
         }

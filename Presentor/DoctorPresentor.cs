@@ -7,23 +7,21 @@ using System.Windows.Forms;
 
 namespace Presentor
 {
-    public class AuthorizationPresentor: IView
+    public class DoctorPresentor : IView
     {
-        public Form _currentView { get; }
-
-        public AuthorizationPresentor(Form view)
+        private readonly Form _currentForm;
+        public DoctorPresentor(Form form)
         {
-            _currentView = view;
+            _currentForm = form;
         }
-
         public void CloseView()
         {
-            _currentView.Close();
+            _currentForm.Close();
         }
 
         public void ShowView()
         {
-            _currentView.Show();
+            _currentForm.Show();
         }
     }
 }

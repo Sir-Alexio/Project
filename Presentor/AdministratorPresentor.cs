@@ -7,13 +7,18 @@ using System.Windows.Forms;
 
 namespace Presentor
 {
-    public class AuthorizationPresentor: IView
+    public class AdministratorPresentor:IView
     {
-        public Form _currentView { get; }
+        Form _currentView;
 
-        public AuthorizationPresentor(Form view)
+        public AdministratorPresentor(Form view)
         {
             _currentView = view;
+        }
+
+        public void ShowView()
+        {
+            _currentView.Show();
         }
 
         public void CloseView()
@@ -21,9 +26,6 @@ namespace Presentor
             _currentView.Close();
         }
 
-        public void ShowView()
-        {
-            _currentView.Show();
-        }
+       
     }
 }
