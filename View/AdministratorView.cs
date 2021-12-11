@@ -11,15 +11,20 @@ using Presentor;
 
 namespace View
 {
-    public partial class Administrator : Form
+    public partial class AdministratorView : Form
     {
-        public Administrator()
+        public AdministratorView()
         {
             InitializeComponent();
         }
 
 
         private void Administrator_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listOfPatients_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

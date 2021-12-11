@@ -1,7 +1,7 @@
 ﻿
 namespace View
 {
-    partial class Authorization
+    partial class AuthorizationView
     {
         /// <summary>
         /// Required designer variable.
@@ -35,9 +35,10 @@ namespace View
             // 
             // Administrator
             // 
-            this.Administrator.Location = new System.Drawing.Point(147, 165);
+            this.Administrator.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Administrator.Location = new System.Drawing.Point(-1, 0);
             this.Administrator.Name = "Administrator";
-            this.Administrator.Size = new System.Drawing.Size(139, 117);
+            this.Administrator.Size = new System.Drawing.Size(399, 451);
             this.Administrator.TabIndex = 0;
             this.Administrator.Text = "Administrator";
             this.Administrator.UseVisualStyleBackColor = true;
@@ -45,22 +46,23 @@ namespace View
             // 
             // Doctor
             // 
-            this.Doctor.Location = new System.Drawing.Point(475, 165);
+            this.Doctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Doctor.Location = new System.Drawing.Point(394, 0);
             this.Doctor.Name = "Doctor";
-            this.Doctor.Size = new System.Drawing.Size(139, 117);
+            this.Doctor.Size = new System.Drawing.Size(407, 451);
             this.Doctor.TabIndex = 1;
             this.Doctor.Text = "Doctor";
             this.Doctor.UseVisualStyleBackColor = true;
             this.Doctor.Click += new System.EventHandler(this.Doctor_Click);
             // 
-            // Authorization
+            // AuthorizationView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Doctor);
             this.Controls.Add(this.Administrator);
-            this.Name = "Authorization";
+            this.Name = "AuthorizationView";
             this.Text = "Authorization";
             this.Load += new System.EventHandler(this.Authorization_Load);
             this.ResumeLayout(false);

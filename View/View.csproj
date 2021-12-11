@@ -46,35 +46,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrator.cs">
+    <Compile Include="AdministratorView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrator.Designer.cs">
-      <DependentUpon>Administrator.cs</DependentUpon>
+    <Compile Include="AdministratorView.Designer.cs">
+      <DependentUpon>AdministratorView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Authorization.cs">
+    <Compile Include="AuthorizationView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".Designer.cs">
-      <DependentUpon>Authorization.cs</DependentUpon>
+      <DependentUpon>AuthorizationView.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Doctor.cs">
+    <Compile Include="DoctorView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Doctor.Designer.cs">
-      <DependentUpon>Doctor.cs</DependentUpon>
+    <Compile Include="DoctorView.Designer.cs">
+      <DependentUpon>DoctorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalExaminationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicalExaminationView.Designer.cs">
+      <DependentUpon>MedicalExaminationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewExaminationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewExaminationView.Designer.cs">
+      <DependentUpon>NewExaminationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPatient.Designer.cs">
+      <DependentUpon>NewPatient.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Administrator.resx">
-      <DependentUpon>Administrator.cs</DependentUpon>
+    <EmbeddedResource Include="AdministratorView.resx">
+      <DependentUpon>AdministratorView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Authorization.resx">
-      <DependentUpon>Authorization.cs</DependentUpon>
+    <EmbeddedResource Include="AuthorizationView.resx">
+      <DependentUpon>AuthorizationView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Doctor.resx">
-      <DependentUpon>Doctor.cs</DependentUpon>
+    <EmbeddedResource Include="DoctorView.resx">
+      <DependentUpon>DoctorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalExaminationView.resx">
+      <DependentUpon>MedicalExaminationView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

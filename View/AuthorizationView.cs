@@ -11,10 +11,10 @@ using Presentor;
 
 namespace View
 {
-    public partial class Authorization : Form
+    public partial class AuthorizationView : Form
     {
 
-        public Authorization()
+        public AuthorizationView()
         {
             InitializeComponent();
         }
@@ -26,13 +26,13 @@ namespace View
 
         private void Administrator_Click(object sender, EventArgs e)
         {
-            AdministratorPresentor presentor = new AdministratorPresentor(new Administrator());
+            AdministratorPresentor presentor = new AdministratorPresentor(new AdministratorView());
             presentor.ShowView();
         }
 
         private void Doctor_Click(object sender, EventArgs e)
         {
-            DoctorPresentor presentor = new DoctorPresentor(new Doctor());
+            DoctorPresentor presentor = new DoctorPresentor(new DoctorView());
             presentor.ShowView();
             
         }
