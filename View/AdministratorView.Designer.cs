@@ -34,7 +34,7 @@ namespace View
             this.newPatientButton = new System.Windows.Forms.Button();
             this.showTheResult = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administratorBackButton = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +58,7 @@ namespace View
             this.newExaminationButton.TabIndex = 12;
             this.newExaminationButton.Text = "Schedule new medical examination";
             this.newExaminationButton.UseVisualStyleBackColor = true;
+            this.newExaminationButton.Click += new System.EventHandler(this.newExaminationButton_Click);
             // 
             // newPatientButton
             // 
@@ -81,19 +82,21 @@ namespace View
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editToolStripMenuItem,
+            this.administratorBackButton,
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(935, 28);
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
-            // editToolStripMenuItem
+            // administratorBackButton
             // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
-            this.editToolStripMenuItem.Text = "back";
+            this.administratorBackButton.Name = "administratorBackButton";
+            this.administratorBackButton.Size = new System.Drawing.Size(54, 24);
+            this.administratorBackButton.Text = "back";
+            this.administratorBackButton.Click += new System.EventHandler(this.administratorBackButton_Click);
             // 
             // viewToolStripMenuItem
             // 
@@ -129,7 +132,7 @@ namespace View
         private System.Windows.Forms.Button newPatientButton;
         private System.Windows.Forms.Button showTheResult;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administratorBackButton;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
     }
 }

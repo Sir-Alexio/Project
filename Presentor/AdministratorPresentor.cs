@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Presentor
 {
     public class AdministratorPresentor:IView
     {
-        Form _currentView;
+        private Form _currentView;
 
         public AdministratorPresentor(Form view)
         {
@@ -24,6 +25,10 @@ namespace Presentor
         public void CloseView()
         {
             _currentView.Close();
+        }
+        public void ShowMessage(ListBox list)
+        {
+            list.Items.Add("Alexey");
         }
 
        

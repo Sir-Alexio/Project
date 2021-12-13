@@ -17,7 +17,7 @@ namespace View
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            AuthorizationPresentor presentor = new AuthorizationPresentor(new MedicalExaminationView());
+            AuthorizationPresentor presentor = new AuthorizationPresentor(new AuthorizationView());
             Application.Run(presentor._currentView);
         }
     }

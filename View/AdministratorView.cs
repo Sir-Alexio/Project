@@ -13,8 +13,11 @@ namespace View
 {
     public partial class AdministratorView : Form
     {
+        AdministratorPresentor administratorPresentor;
+        
         public AdministratorView()
         {
+            administratorPresentor = new AdministratorPresentor(this);
             InitializeComponent();
         }
 
@@ -25,6 +28,23 @@ namespace View
         }
 
         private void listOfPatients_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void administratorBackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void newExaminationButton_Click(object sender, EventArgs e)
+        {
+            administratorPresentor.ShowMessage(listOfPatients);
+            
+            
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

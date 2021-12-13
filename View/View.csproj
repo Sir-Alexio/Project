@@ -97,6 +97,12 @@
     <EmbeddedResource Include="MedicalExaminationView.resx">
       <DependentUpon>MedicalExaminationView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewExaminationView.resx">
+      <DependentUpon>NewExaminationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPatient.resx">
+      <DependentUpon>NewPatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

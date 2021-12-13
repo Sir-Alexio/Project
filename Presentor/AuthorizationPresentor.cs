@@ -11,9 +11,10 @@ namespace Presentor
     {
         public Form _currentView { get; }
 
-        public AuthorizationPresentor(Form view)
+
+        public AuthorizationPresentor(Form authorizationView)
         {
-            _currentView = view;
+            _currentView = authorizationView;
         }
 
         public void CloseView()

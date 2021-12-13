@@ -13,6 +13,9 @@ namespace View
 {
     public partial class AuthorizationView : Form
     {
+        AdministratorPresentor administratorPresentor = new AdministratorPresentor(new AdministratorView());
+        DoctorPresentor doctorPresentor = new DoctorPresentor(new DoctorView());
+        
 
         public AuthorizationView()
         {
@@ -26,14 +29,12 @@ namespace View
 
         private void Administrator_Click(object sender, EventArgs e)
         {
-            AdministratorPresentor presentor = new AdministratorPresentor(new AdministratorView());
-            presentor.ShowView();
+            administratorPresentor.ShowView();
         }
 
         private void Doctor_Click(object sender, EventArgs e)
         {
-            DoctorPresentor presentor = new DoctorPresentor(new DoctorView());
-            presentor.ShowView();
+           doctorPresentor.ShowView();
             
         }
 
