@@ -11,26 +11,27 @@ using Presentor;
 
 namespace View
 {
-    public partial class DoctorView : Form, IView
+    public partial class DoctorView : Form
     {
+        private DoctorPresentor doctorPresentor;
+        private MedicalExaminationPresentor medicalExaminationPresentor = 
+            new MedicalExaminationPresentor(new MedicalExaminationView());
         public DoctorView()
         {
+            doctorPresentor = new DoctorPresentor(this);
             InitializeComponent();
         }
 
-        public void CloseView()
-        {
-            this.Close();
-        }
-
-        public void ShowView()
-        {
-            this.Show();
-        }
+        
 
         private void Doctor_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void startMadicalExaminationButton_Click(object sender, EventArgs e)
+        {
+            medicalExaminationPresentor.ShowView();
         }
     }
 }

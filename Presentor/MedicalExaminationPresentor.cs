@@ -5,29 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace Presentor
 {
-    public class AdministratorPresentor:IView
+    public class MedicalExaminationPresentor:IView
     {
         private Form _currentView;
 
-        public AdministratorPresentor(Form view)
+        public MedicalExaminationPresentor(Form view)
         {
             _currentView = view;
         }
 
         public void ShowView()
         {
-            _currentView.Visible = true;
+            _currentView.Show();
         }
 
         public void CloseView()
         {
-            _currentView.Visible = false;
+            _currentView.Close();
         }
-       
-
-       
     }
 }

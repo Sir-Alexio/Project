@@ -1,7 +1,7 @@
 ﻿
 namespace View
 {
-    partial class NewPatient
+    partial class NewPatientView
     {
         /// <summary>
         /// Required designer variable.

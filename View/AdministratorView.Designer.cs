@@ -68,6 +68,7 @@ namespace View
             this.newPatientButton.TabIndex = 13;
             this.newPatientButton.Text = "Register new patient";
             this.newPatientButton.UseVisualStyleBackColor = true;
+            this.newPatientButton.Click += new System.EventHandler(this.newPatientButton_Click);
             // 
             // showTheResult
             // 

@@ -48,6 +48,9 @@
     <Compile Include="DoctorPresentor.cs" />
     <Compile Include="IView.cs" />
     <Compile Include="AuthorizationPresentor.cs" />
+    <Compile Include="MedicalExaminationPresentor.cs" />
+    <Compile Include="NewExaminationPresentor.cs" />
+    <Compile Include="NewPatientPresentor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -13,7 +13,9 @@ namespace View
 {
     public partial class AdministratorView : Form
     {
-        AdministratorPresentor administratorPresentor;
+        private  AdministratorPresentor administratorPresentor;
+        private  NewExaminationPresentor examinationPresentor = new NewExaminationPresentor(new NewExaminationView());
+        private NewPatientPresentor patientPresentor = new NewPatientPresentor(new NewPatientView());
         
         public AdministratorView()
         {
@@ -34,19 +36,22 @@ namespace View
 
         private void administratorBackButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            administratorPresentor.CloseView();
         }
 
         private void newExaminationButton_Click(object sender, EventArgs e)
         {
-            administratorPresentor.ShowMessage(listOfPatients);
-            
-            
+            examinationPresentor.ShowView();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void newPatientButton_Click(object sender, EventArgs e)
+        {
+            patientPresentor.ShowView();
         }
     }
 }
