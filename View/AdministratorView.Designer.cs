@@ -29,26 +29,15 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
-            this.listOfPatients = new System.Windows.Forms.ListBox();
             this.newExaminationButton = new System.Windows.Forms.Button();
             this.newPatientButton = new System.Windows.Forms.Button();
             this.showTheResult = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.administratorBackButton = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listOfPatients = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // listOfPatients
-            // 
-            this.listOfPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listOfPatients.FormattingEnabled = true;
-            this.listOfPatients.ItemHeight = 29;
-            this.listOfPatients.Location = new System.Drawing.Point(0, 31);
-            this.listOfPatients.Name = "listOfPatients";
-            this.listOfPatients.Size = new System.Drawing.Size(935, 468);
-            this.listOfPatients.TabIndex = 11;
-            this.listOfPatients.SelectedIndexChanged += new System.EventHandler(this.listOfPatients_SelectedIndexChanged);
             // 
             // newExaminationButton
             // 
@@ -105,6 +94,17 @@ namespace View
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.viewToolStripMenuItem.Text = "Update";
             // 
+            // listOfPatients
+            // 
+            this.listOfPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listOfPatients.FormattingEnabled = true;
+            this.listOfPatients.ItemHeight = 29;
+            this.listOfPatients.Location = new System.Drawing.Point(0, 31);
+            this.listOfPatients.Name = "listOfPatients";
+            this.listOfPatients.Size = new System.Drawing.Size(935, 468);
+            this.listOfPatients.TabIndex = 11;
+            this.listOfPatients.SelectedIndexChanged += new System.EventHandler(this.listOfPatients_SelectedIndexChanged);
+            // 
             // AdministratorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -127,13 +127,12 @@ namespace View
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listOfPatients;
         private System.Windows.Forms.Button newExaminationButton;
         private System.Windows.Forms.Button newPatientButton;
         private System.Windows.Forms.Button showTheResult;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem administratorBackButton;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ListBox listOfPatients;
     }
 }
