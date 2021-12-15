@@ -12,5 +12,6 @@ namespace Model.Entities
         public string name { get; set; }
         public string surname { get; set; }
         public string sex { get; set; }
+        public string dateOfBirth { get; set; }
     }
 }

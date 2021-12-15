@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="Entities\Examination.cs" />
     <Compile Include="PatientsDB.cs" />
     <Compile Include="Entities\Administrator.cs" />
     <Compile Include="Entities\Doctor.cs" />
