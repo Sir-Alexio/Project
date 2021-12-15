@@ -10,8 +10,9 @@ namespace Model
 {
     public  class Connection
     {
-        private static MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=mysql;database=mydata ");
-        public static  void  openConnection()
+        private  static MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=mysql;database=mydata ");
+        
+        public   void  openConnection()
         {
             if (connection.State == System.Data.ConnectionState.Closed)
             {
@@ -19,14 +20,14 @@ namespace Model
             }
         }
 
-        public static void closeConnection()
+        public  void closeConnection()
         {
             if (connection.State == System.Data.ConnectionState.Open)
             {
                 connection.Close();
             }
         }
-        public static MySqlConnection genConnection()
+        public static MySqlConnection getConnection()
         {
             return connection;
         }

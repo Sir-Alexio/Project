@@ -55,6 +55,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,7 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
-    <Compile Include="DataAccess.cs" />
+    <Compile Include="PatientsDB.cs" />
     <Compile Include="Entities\Administrator.cs" />
     <Compile Include="Entities\Doctor.cs" />
     <Compile Include="Entities\Patient.cs" />

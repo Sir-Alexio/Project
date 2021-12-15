@@ -19,8 +19,10 @@ namespace View
         
         public AdministratorView()
         {
-            administratorPresentor = new AdministratorPresentor(this);
             InitializeComponent();
+
+            administratorPresentor = new AdministratorPresentor(this);
+            listOfPatients.DataSource = administratorPresentor.getStringPatients();  
         }
 
 
@@ -31,7 +33,7 @@ namespace View
 
         private void listOfPatients_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void administratorBackButton_Click(object sender, EventArgs e)

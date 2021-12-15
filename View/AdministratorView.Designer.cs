@@ -102,18 +102,18 @@ namespace View
             this.listOfPatients.Location = new System.Drawing.Point(0, 31);
             this.listOfPatients.Name = "listOfPatients";
             this.listOfPatients.Size = new System.Drawing.Size(935, 468);
-            this.listOfPatients.TabIndex = 11;
-            this.listOfPatients.SelectedIndexChanged += new System.EventHandler(this.listOfPatients_SelectedIndexChanged);
+            this.listOfPatients.TabIndex = 16;
+            this.listOfPatients.Tag = "test";
             // 
             // AdministratorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(935, 625);
+            this.Controls.Add(this.listOfPatients);
             this.Controls.Add(this.showTheResult);
             this.Controls.Add(this.newPatientButton);
             this.Controls.Add(this.newExaminationButton);
-            this.Controls.Add(this.listOfPatients);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AdministratorView";
