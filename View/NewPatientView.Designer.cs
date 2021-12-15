@@ -30,8 +30,6 @@ namespace View
         private void InitializeComponent()
         {
             this.saveButton = new System.Windows.Forms.Button();
-            this.femaleRadioBatton = new System.Windows.Forms.RadioButton();
-            this.maleRadioButton = new System.Windows.Forms.RadioButton();
             this.dateOfBirthLable = new System.Windows.Forms.Label();
             this.dateOfBirthTextBox = new System.Windows.Forms.TextBox();
             this.sexLable = new System.Windows.Forms.Label();
@@ -39,6 +37,8 @@ namespace View
             this.nameLable = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.surnameTextBox = new System.Windows.Forms.TextBox();
+            this.femaleRadioBatton = new System.Windows.Forms.RadioButton();
+            this.maleRadioButton = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // saveButton
@@ -49,28 +49,7 @@ namespace View
             this.saveButton.TabIndex = 32;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
-            // 
-            // femaleRadioBatton
-            // 
-            this.femaleRadioBatton.AutoSize = true;
-            this.femaleRadioBatton.Location = new System.Drawing.Point(454, 192);
-            this.femaleRadioBatton.Name = "femaleRadioBatton";
-            this.femaleRadioBatton.Size = new System.Drawing.Size(75, 21);
-            this.femaleRadioBatton.TabIndex = 31;
-            this.femaleRadioBatton.TabStop = true;
-            this.femaleRadioBatton.Text = "Female";
-            this.femaleRadioBatton.UseVisualStyleBackColor = true;
-            // 
-            // maleRadioButton
-            // 
-            this.maleRadioButton.AutoSize = true;
-            this.maleRadioButton.Location = new System.Drawing.Point(336, 192);
-            this.maleRadioButton.Name = "maleRadioButton";
-            this.maleRadioButton.Size = new System.Drawing.Size(59, 21);
-            this.maleRadioButton.TabIndex = 30;
-            this.maleRadioButton.TabStop = true;
-            this.maleRadioButton.Text = "Male";
-            this.maleRadioButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // dateOfBirthLable
             // 
@@ -129,7 +108,31 @@ namespace View
             this.surnameTextBox.Size = new System.Drawing.Size(214, 22);
             this.surnameTextBox.TabIndex = 23;
             // 
-            // NewPatient
+            // femaleRadioBatton
+            // 
+            this.femaleRadioBatton.AutoSize = true;
+            this.femaleRadioBatton.Location = new System.Drawing.Point(454, 192);
+            this.femaleRadioBatton.Name = "femaleRadioBatton";
+            this.femaleRadioBatton.Size = new System.Drawing.Size(75, 21);
+            this.femaleRadioBatton.TabIndex = 31;
+            this.femaleRadioBatton.TabStop = true;
+            this.femaleRadioBatton.Text = "Female";
+            this.femaleRadioBatton.UseVisualStyleBackColor = true;
+            this.femaleRadioBatton.CheckedChanged += new System.EventHandler(this.femaleRadioBatton_CheckedChanged);
+            // 
+            // maleRadioButton
+            // 
+            this.maleRadioButton.AutoSize = true;
+            this.maleRadioButton.Location = new System.Drawing.Point(336, 192);
+            this.maleRadioButton.Name = "maleRadioButton";
+            this.maleRadioButton.Size = new System.Drawing.Size(59, 21);
+            this.maleRadioButton.TabIndex = 30;
+            this.maleRadioButton.TabStop = true;
+            this.maleRadioButton.Text = "Male";
+            this.maleRadioButton.UseVisualStyleBackColor = true;
+            this.maleRadioButton.CheckedChanged += new System.EventHandler(this.maleRadioButton_CheckedChanged);
+            // 
+            // NewPatientView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,8 +147,9 @@ namespace View
             this.Controls.Add(this.nameLable);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.surnameTextBox);
-            this.Name = "NewPatient";
+            this.Name = "NewPatientView";
             this.Text = "NewPatient";
+            this.Load += new System.EventHandler(this.NewPatientView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,8 +158,6 @@ namespace View
         #endregion
 
         private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.RadioButton femaleRadioBatton;
-        private System.Windows.Forms.RadioButton maleRadioButton;
         private System.Windows.Forms.Label dateOfBirthLable;
         private System.Windows.Forms.TextBox dateOfBirthTextBox;
         private System.Windows.Forms.Label sexLable;
@@ -163,5 +165,7 @@ namespace View
         private System.Windows.Forms.Label nameLable;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox surnameTextBox;
+        private System.Windows.Forms.RadioButton femaleRadioBatton;
+        private System.Windows.Forms.RadioButton maleRadioButton;
     }
 }

@@ -8,11 +8,11 @@ using MySql.Data.MySqlClient;
 
 namespace Model
 {
-    public  class Connection
+    public  class Connection : IConnection
     {
-        private  static MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=mysql;database=mydata ");
+        private readonly MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=mysql;database=mydata ");
         
-        public   void  openConnection()
+        public void  openConnection()
         {
             if (connection.State == System.Data.ConnectionState.Closed)
             {
@@ -27,7 +27,7 @@ namespace Model
                 connection.Close();
             }
         }
-        public static MySqlConnection getConnection()
+        public  MySqlConnection getConnection()
         {
             return connection;
         }

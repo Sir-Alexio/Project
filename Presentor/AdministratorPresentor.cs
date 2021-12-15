@@ -1,24 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
 using Model;
 using Model.Entities;
-using System.Windows.Forms;
+using Presentor;
 using Model.Entities;
-
 
 namespace Presentor
 {
-    public class AdministratorPresentor:IView
+    public class AdministratorPresentor:IView,IToStringList
     {
         private Form _currentView;
 
         private List<string> stringPatients = new List<string>();
-
-        private List<Patient> newPatients;
 
         public AdministratorPresentor(Form view)
         {
@@ -35,16 +28,17 @@ namespace Presentor
             _currentView.Visible = false;
         }
 
-        public List<string> getStringPatients()
-        {
-            PatientsDB dataAccess = new PatientsDB();
-
-            newPatients = dataAccess.getListOfPatients();
-
-            foreach (Patient patient in newPatients)
+        public List<string> convertToStringList()
+        { 
+            foreach (Patient patient in PatientsDB.getListOfPatients())
             {
-                string a = patient.id.ToString() + " " + patient.name + " " + patient.surname + " " + patient.sex;
-                stringPatients.Add(a);
+                string stringPatient = patient.id.ToString() + " " + 
+                            patient.name + " " + 
+                            patient.surname + " " + 
+                            patient.sex+ " " + 
+                            patient.dateOfBirth;
+
+                stringPatients.Add(stringPatient);
             }
 
             return stringPatients;

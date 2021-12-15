@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="AdministratorPresentor.cs" />
     <Compile Include="DoctorPresentor.cs" />
+    <Compile Include="INewPatientView.cs" />
     <Compile Include="IView.cs" />
     <Compile Include="AuthorizationPresentor.cs" />
     <Compile Include="MedicalExaminationPresentor.cs" />

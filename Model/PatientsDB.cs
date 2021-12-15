@@ -1,26 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using Model.Entities;
-using System.Windows.Forms;
 
 namespace Model
 {
-    public class PatientsDB
+    public static class PatientsDB
     {
-        private List<Patient> patients = new List<Patient>();
+        private static List<Patient> patients = new List<Patient>();
 
-        private Connection connection = new Connection();
+        private static Connection connection = new Connection();
 
-        private MySqlCommand mySqlCommand = new MySqlCommand("SELECT * FROM `patients`", Connection.getConnection());
+        private static MySqlCommand mySqlCommand;
 
-        private MySqlDataReader reader;
-        public List<Patient> getListOfPatients()
+        private static MySqlDataReader reader;
+        public static List<Patient> getListOfPatients()
         {
+            mySqlCommand = new MySqlCommand("SELECT * FROM `patients`", connection.getConnection());
+
             connection.openConnection();
 
             reader = mySqlCommand.ExecuteReader();
@@ -33,13 +30,14 @@ namespace Model
                 patient.name = (reader[1].ToString());
                 patient.surname = (reader[2].ToString());
                 patient.sex = (reader[3].ToString());
+                patient.dateOfBirth = reader[4].ToString();
 
                 patients.Add(patient); 
             }
 
              reader.Close();
 
-             connection.closeConnection();
+            connection.closeConnection();
 
             return patients;
            

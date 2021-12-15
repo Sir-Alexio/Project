@@ -22,7 +22,7 @@ namespace View
             InitializeComponent();
 
             administratorPresentor = new AdministratorPresentor(this);
-            listOfPatients.DataSource = administratorPresentor.getStringPatients();  
+            listOfPatients.DataSource = administratorPresentor.convertToStringList();  
         }
 
 
