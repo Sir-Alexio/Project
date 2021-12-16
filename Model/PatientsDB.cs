@@ -22,6 +22,8 @@ namespace Model
 
             reader = mySqlCommand.ExecuteReader();
 
+            patients.Clear();
+
             while (reader.Read())
             {
                 Patient patient = new Patient();
@@ -35,12 +37,33 @@ namespace Model
                 patients.Add(patient); 
             }
 
-             reader.Close();
+            reader.Close();
 
             connection.closeConnection();
 
             return patients;
            
+        }
+
+        public static bool insertPatient(Patient patient)
+        {
+            mySqlCommand = new MySqlCommand($"INSERT INTO `patients` ( `name`, `surname`, `sex`, `dateOfBirth`) VALUES ( '{patient.name}', '{patient.surname}', '{patient.sex}', '{patient.dateOfBirth}');", connection.getConnection());
+
+            connection.openConnection();
+
+            if (mySqlCommand.ExecuteNonQuery() == 1)
+            {
+                connection.closeConnection();
+                return true;
+            }
+            else
+            {
+                connection.closeConnection();
+                return false;
+            }
+
+
+            
         }
     }
 }

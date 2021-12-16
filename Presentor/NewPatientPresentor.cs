@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model.Entities;
+using Model;
 
 namespace Presentor
 {
@@ -12,31 +13,39 @@ namespace Presentor
     {
         private readonly Form _currentForm;
 
-        private Patient newPatient;
-
         public NewPatientPresentor(Form form)
         {
             _currentForm = form;
         }
         public void CloseView()
         {
-            _currentForm.Close();
+            _currentForm.Visible = false;
         }
 
         public void ShowView()
         {
-            _currentForm.Show();
+            _currentForm.Visible = true;
         }
 
-        public void makePatient(string name,string surname, string sex, string dateOfBirth)
+        public bool isMakePatientInsert(string name,string surname, string sex, string dateOfBirth)
         {
-            newPatient = new Patient();
+            Patient newPatient = new Patient();
 
             newPatient.name = name;
             newPatient.surname = surname;
             newPatient.sex = sex;
             newPatient.dateOfBirth = dateOfBirth;
 
+            return PatientsDB.insertPatient(newPatient);
+        }
+
+        public bool isInfoCorrect(string name, string surname, string sex, string dateOfBirth)
+        {
+            if (name == "" || surname == "" || sex == "Error" || dateOfBirth == "")
+            {
+                return false;
+            }
+            else return true;
         }
 
     }

@@ -39,6 +39,7 @@ namespace View
             this.surnameTextBox = new System.Windows.Forms.TextBox();
             this.femaleRadioBatton = new System.Windows.Forms.RadioButton();
             this.maleRadioButton = new System.Windows.Forms.RadioButton();
+            this.backButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // saveButton
@@ -132,11 +133,22 @@ namespace View
             this.maleRadioButton.UseVisualStyleBackColor = true;
             this.maleRadioButton.CheckedChanged += new System.EventHandler(this.maleRadioButton_CheckedChanged);
             // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(221, 351);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(87, 39);
+            this.backButton.TabIndex = 33;
+            this.backButton.Text = "back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // NewPatientView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.femaleRadioBatton);
             this.Controls.Add(this.maleRadioButton);
@@ -167,5 +179,6 @@ namespace View
         private System.Windows.Forms.TextBox surnameTextBox;
         private System.Windows.Forms.RadioButton femaleRadioBatton;
         private System.Windows.Forms.RadioButton maleRadioButton;
+        private System.Windows.Forms.Button backButton;
     }
 }

@@ -17,12 +17,12 @@ namespace Presentor
         }
         public void CloseView()
         {
-            _currentForm.Close();
+            _currentForm.Visible = false;
         }
 
         public void ShowView()
         {
-            _currentForm.Show();
+            _currentForm.Visible = true;
         }
     }
 }

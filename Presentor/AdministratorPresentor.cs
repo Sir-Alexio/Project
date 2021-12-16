@@ -29,7 +29,9 @@ namespace Presentor
         }
 
         public List<string> convertToStringList()
-        { 
+        {
+            stringPatients.Clear();
+
             foreach (Patient patient in PatientsDB.getListOfPatients())
             {
                 string stringPatient = patient.id.ToString() + " " + 

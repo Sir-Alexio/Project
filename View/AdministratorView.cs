@@ -55,5 +55,25 @@ namespace View
         {
             patientPresentor.ShowView();
         }
+
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        
+
+        private void Update_Click(object sender, EventArgs e)
+        {
+
+            listOfPatients.DataSource = null;
+            listOfPatients.Items.Clear();
+            listOfPatients.DataSource = administratorPresentor.convertToStringList();
+        }
+
+        private void listOfPatients_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

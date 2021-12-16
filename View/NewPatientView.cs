@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Presentor;
 
@@ -13,16 +6,14 @@ namespace View
 {
     public partial class NewPatientView : Form
     {
-        NewPatientPresentor _presentor;
+        private NewPatientPresentor _presentor;
 
-        
         public NewPatientView()
         {
             InitializeComponent();
             _presentor = new NewPatientPresentor(this);
             
         }
-        
        
         private void NewPatientView_Load(object sender, EventArgs e)
         {
@@ -46,18 +37,30 @@ namespace View
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            string sexTextBox;
+           
+            string sexTextBox = "";
+
             if (maleRadioButton.Checked) { sexTextBox = "Male"; }
-            else { sexTextBox = "Female"; }
+            else if(femaleRadioBatton.Checked){ sexTextBox = "Female"; }
+            else { sexTextBox = "Error"; }
 
-            _presentor.ShowView();
+            if (!_presentor.isInfoCorrect(nameTextBox.Text, surnameTextBox.Text, sexTextBox, dateOfBirthTextBox.Text))
+            {
+                MessageBox.Show("Invalid Input!");
+                return;
+            }
 
-            _presentor.makePatient(nameTextBox.Text, 
-                                    surnameTextBox.Text, 
-                                    sexTextBox, 
-                                    dateOfBirthTextBox.Text);
+            if (!_presentor.isMakePatientInsert(nameTextBox.Text, surnameTextBox.Text, sexTextBox, dateOfBirthTextBox.Text))
+            {
+                MessageBox.Show("Error with Data Base!");
+            }
 
+            _presentor.CloseView();
+        }
 
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            _presentor.CloseView();
         }
     }
 }
