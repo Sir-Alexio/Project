@@ -8,6 +8,6 @@ namespace Model
 {
     public interface IToStringList
     {
-        List<string> convertToStringList();
+        List<string> getStringListOfPatients();
     }
 }

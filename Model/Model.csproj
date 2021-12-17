@@ -64,13 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connection.cs" />
+    <Compile Include="DataBase\Connection.cs" />
     <Compile Include="Entities\Examination.cs" />
-    <Compile Include="IConnection.cs" />
-    <Compile Include="IToStringList.cs" />
-    <Compile Include="PatientsDB.cs" />
-    <Compile Include="Entities\Administrator.cs" />
-    <Compile Include="Entities\Doctor.cs" />
+    <Compile Include="DataBase\ExaminationDB.cs" />
+    <Compile Include="Interfaces\IConnection.cs" />
+    <Compile Include="Interfaces\IToStringList.cs" />
+    <Compile Include="DataBase\PatientsDB.cs" />
     <Compile Include="Entities\Patient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

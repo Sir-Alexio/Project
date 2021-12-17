@@ -35,8 +35,8 @@ namespace View
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.administratorBackButton = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listOfPatients = new System.Windows.Forms.ListBox();
             this.Update = new System.Windows.Forms.Button();
+            this.listOfPatients = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +77,7 @@ namespace View
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(935, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(935, 28);
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -85,16 +85,26 @@ namespace View
             // administratorBackButton
             // 
             this.administratorBackButton.Name = "administratorBackButton";
-            this.administratorBackButton.Size = new System.Drawing.Size(54, 26);
+            this.administratorBackButton.Size = new System.Drawing.Size(54, 24);
             this.administratorBackButton.Text = "back";
             this.administratorBackButton.Click += new System.EventHandler(this.administratorBackButton_Click);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(72, 26);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.viewToolStripMenuItem.Text = "Update";
             this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
+            // 
+            // Update
+            // 
+            this.Update.Location = new System.Drawing.Point(267, 518);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(71, 47);
+            this.Update.TabIndex = 18;
+            this.Update.Text = "Update";
+            this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // listOfPatients
             // 
@@ -107,16 +117,6 @@ namespace View
             this.listOfPatients.TabIndex = 16;
             this.listOfPatients.Tag = "test";
             this.listOfPatients.SelectedIndexChanged += new System.EventHandler(this.listOfPatients_SelectedIndexChanged_1);
-            // 
-            // Update
-            // 
-            this.Update.Location = new System.Drawing.Point(267, 518);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(71, 47);
-            this.Update.TabIndex = 18;
-            this.Update.Text = "Update";
-            this.Update.UseVisualStyleBackColor = true;
-            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // AdministratorView
             // 
@@ -147,7 +147,7 @@ namespace View
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem administratorBackButton;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ListBox listOfPatients;
         private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.ListBox listOfPatients;
     }
 }

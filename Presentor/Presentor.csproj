@@ -44,14 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdministratorPresentor.cs" />
-    <Compile Include="DoctorPresentor.cs" />
-    <Compile Include="INewPatientView.cs" />
-    <Compile Include="IView.cs" />
-    <Compile Include="AuthorizationPresentor.cs" />
-    <Compile Include="MedicalExaminationPresentor.cs" />
-    <Compile Include="NewExaminationPresentor.cs" />
-    <Compile Include="NewPatientPresentor.cs" />
+    <Compile Include="Presentors\AdministratorPresentor.cs" />
+    <Compile Include="Presentors\DoctorPresentor.cs" />
+    <Compile Include="Interfaces\INewPatientView.cs" />
+    <Compile Include="Interfaces\IView.cs" />
+    <Compile Include="Presentors\AuthorizationPresentor.cs" />
+    <Compile Include="Presentors\MedicalExaminationPresentor.cs" />
+    <Compile Include="Presentors\NewExaminationPresentor.cs" />
+    <Compile Include="Presentors\NewPatientPresentor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

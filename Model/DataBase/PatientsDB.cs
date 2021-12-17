@@ -33,6 +33,7 @@ namespace Model
                 patient.surname = (reader[2].ToString());
                 patient.sex = (reader[3].ToString());
                 patient.dateOfBirth = reader[4].ToString();
+                patient.examination = reader[5].ToString();
 
                 patients.Add(patient); 
             }
@@ -47,7 +48,7 @@ namespace Model
 
         public static bool insertPatient(Patient patient)
         {
-            mySqlCommand = new MySqlCommand($"INSERT INTO `patients` ( `name`, `surname`, `sex`, `dateOfBirth`) VALUES ( '{patient.name}', '{patient.surname}', '{patient.sex}', '{patient.dateOfBirth}');", connection.getConnection());
+            mySqlCommand = new MySqlCommand($"INSERT INTO `patients` (`id`, `name`, `surname`, `sex`, `dateOfBirth`, `examination`) VALUES (NULL, '{patient.name}', '{patient.surname}', '{patient.sex}', '{patient.dateOfBirth}', '{patient.examination}');", connection.getConnection());
 
             connection.openConnection();
 
@@ -64,6 +65,10 @@ namespace Model
 
 
             
+        }
+        public static void makeExaminatedPatien(int index)
+        {
+            patients[index].examination = "Examinated";
         }
     }
 }

@@ -13,5 +13,10 @@ namespace Model.Entities
         public string surname { get; set; }
         public string sex { get; set; }
         public string dateOfBirth { get; set; }
+        public string examination { get; set; }
+        public Patient()
+        {
+            examination = "No examination";
+        }
     }
 }

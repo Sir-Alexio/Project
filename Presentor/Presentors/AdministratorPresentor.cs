@@ -2,8 +2,6 @@
 using System.Windows.Forms;
 using Model;
 using Model.Entities;
-using Presentor;
-using Model.Entities;
 
 namespace Presentor
 {
@@ -28,17 +26,18 @@ namespace Presentor
             _currentView.Visible = false;
         }
 
-        public List<string> convertToStringList()
+        public List<string> getStringListOfPatients()
         {
             stringPatients.Clear();
 
             foreach (Patient patient in PatientsDB.getListOfPatients())
             {
-                string stringPatient = patient.id.ToString() + " " + 
-                            patient.name + " " + 
-                            patient.surname + " " + 
-                            patient.sex+ " " + 
-                            patient.dateOfBirth;
+                string stringPatient = patient.id.ToString().PadRight(2) + 
+                            patient.name.PadRight(20) + 
+                            patient.surname.PadRight(20) + 
+                            patient.sex.PadRight(20) + 
+                            patient.dateOfBirth.PadRight(20) +
+                            patient.examination;
 
                 stringPatients.Add(stringPatient);
             }

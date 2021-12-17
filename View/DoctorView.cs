@@ -18,8 +18,9 @@ namespace View
             new MedicalExaminationPresentor(new MedicalExaminationView());
         public DoctorView()
         {
-            doctorPresentor = new DoctorPresentor(this);
             InitializeComponent();
+            doctorPresentor = new DoctorPresentor(this);
+            
         }
 
         

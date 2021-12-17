@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Presentor;
 
@@ -22,7 +15,7 @@ namespace View
             InitializeComponent();
 
             administratorPresentor = new AdministratorPresentor(this);
-            listOfPatients.DataSource = administratorPresentor.convertToStringList();  
+            listOfPatients.DataSource = administratorPresentor.getStringListOfPatients();  
         }
 
 
@@ -68,7 +61,7 @@ namespace View
 
             listOfPatients.DataSource = null;
             listOfPatients.Items.Clear();
-            listOfPatients.DataSource = administratorPresentor.convertToStringList();
+            listOfPatients.DataSource = administratorPresentor.getStringListOfPatients();
         }
 
         private void listOfPatients_SelectedIndexChanged_1(object sender, EventArgs e)
