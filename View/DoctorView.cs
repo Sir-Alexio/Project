@@ -20,6 +20,7 @@ namespace View
         {
             InitializeComponent();
             doctorPresentor = new DoctorPresentor(this);
+            listOfExaminations.DataSource = doctorPresentor.getStringListOfExaminations();
             
         }
 
@@ -33,6 +34,18 @@ namespace View
         private void startMadicalExaminationButton_Click(object sender, EventArgs e)
         {
             medicalExaminationPresentor.ShowView();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            doctorPresentor.CloseView();
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            listOfExaminations.DataSource = null;
+            listOfExaminations.Items.Clear();
+            listOfExaminations.DataSource = doctorPresentor.getStringListOfExaminations();
         }
     }
 }

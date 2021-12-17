@@ -55,8 +55,8 @@ namespace Presentor
 
             return ExaminationDB.insertExamination(examination);
         }
-       
 
+        
 
         public void ShowView()
         {

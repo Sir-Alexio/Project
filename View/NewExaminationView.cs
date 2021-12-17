@@ -57,10 +57,12 @@ namespace View
                 stringListOfSensors += "Oxygen Level ";
             }
         
+            
             if(!_presentor.makeExamination(listOfPatients.SelectedIndex+1, typesOfMuscleLoading.SelectedItem.ToString(), stringListOfSensors, dateOfExaminationTextBox.Text))
             {
                 MessageBox.Show("Error with data!");
             }
+
             _presentor.CloseView();
         }
 

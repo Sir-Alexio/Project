@@ -29,26 +29,15 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
-            this.lv_Initiative = new System.Windows.Forms.ListView();
             this.startMedicalExaminationButton = new System.Windows.Forms.Button();
+            this.listOfExaminations = new System.Windows.Forms.ListBox();
+            this.backButton = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // lv_Initiative
-            // 
-            this.lv_Initiative.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lv_Initiative.FullRowSelect = true;
-            this.lv_Initiative.GridLines = true;
-            this.lv_Initiative.HideSelection = false;
-            this.lv_Initiative.Location = new System.Drawing.Point(1, 1);
-            this.lv_Initiative.Name = "lv_Initiative";
-            this.lv_Initiative.Size = new System.Drawing.Size(927, 458);
-            this.lv_Initiative.TabIndex = 11;
-            this.lv_Initiative.UseCompatibleStateImageBehavior = false;
-            this.lv_Initiative.View = System.Windows.Forms.View.Details;
             // 
             // startMedicalExaminationButton
             // 
-            this.startMedicalExaminationButton.Location = new System.Drawing.Point(379, 482);
+            this.startMedicalExaminationButton.Location = new System.Drawing.Point(330, 482);
             this.startMedicalExaminationButton.Name = "startMedicalExaminationButton";
             this.startMedicalExaminationButton.Size = new System.Drawing.Size(134, 64);
             this.startMedicalExaminationButton.TabIndex = 12;
@@ -56,13 +45,46 @@ namespace View
             this.startMedicalExaminationButton.UseVisualStyleBackColor = true;
             this.startMedicalExaminationButton.Click += new System.EventHandler(this.startMadicalExaminationButton_Click);
             // 
+            // listOfExaminations
+            // 
+            this.listOfExaminations.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listOfExaminations.FormattingEnabled = true;
+            this.listOfExaminations.ItemHeight = 29;
+            this.listOfExaminations.Location = new System.Drawing.Point(1, -2);
+            this.listOfExaminations.Name = "listOfExaminations";
+            this.listOfExaminations.Size = new System.Drawing.Size(927, 468);
+            this.listOfExaminations.TabIndex = 17;
+            this.listOfExaminations.Tag = "test";
+            // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(39, 494);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(103, 41);
+            this.backButton.TabIndex = 18;
+            this.backButton.Text = "back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
+            // updateButton
+            // 
+            this.updateButton.Location = new System.Drawing.Point(669, 494);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(103, 41);
+            this.updateButton.TabIndex = 19;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            // 
             // DoctorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 573);
+            this.Controls.Add(this.updateButton);
+            this.Controls.Add(this.backButton);
+            this.Controls.Add(this.listOfExaminations);
             this.Controls.Add(this.startMedicalExaminationButton);
-            this.Controls.Add(this.lv_Initiative);
             this.Name = "DoctorView";
             this.Text = "Doctor";
             this.Load += new System.EventHandler(this.Doctor_Load);
@@ -71,8 +93,9 @@ namespace View
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView lv_Initiative;
         private System.Windows.Forms.Button startMedicalExaminationButton;
+        private System.Windows.Forms.ListBox listOfExaminations;
+        private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Button updateButton;
     }
 }

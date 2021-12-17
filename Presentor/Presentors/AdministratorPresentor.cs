@@ -32,12 +32,11 @@ namespace Presentor
 
             foreach (Patient patient in PatientsDB.getListOfPatients())
             {
-                string stringPatient = patient.id.ToString().PadRight(2) + 
-                            patient.name.PadRight(20) + 
-                            patient.surname.PadRight(20) + 
-                            patient.sex.PadRight(20) + 
-                            patient.dateOfBirth.PadRight(20) +
-                            patient.examination;
+                string stringPatient = patient.id.ToString().PadRight(2) +
+                            patient.name.PadRight(20) +
+                            patient.surname.PadRight(20) +
+                            patient.sex.PadRight(20) +
+                            patient.dateOfBirth;
 
                 stringPatients.Add(stringPatient);
             }
