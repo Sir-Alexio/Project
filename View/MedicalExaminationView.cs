@@ -37,5 +37,30 @@ namespace View
         {
             infoTextBox.Text = _presentor.getInfo();
         }
+
+        private void hangSensorsButton_Click(object sender, EventArgs e)
+        {
+
+            if (termometerCheckBox.Checked)
+            {
+                termometerPic.Visible = true;
+            }
+            else termometerPic.Visible = false;
+            if (OximeterCheckBox.Checked)
+            {
+                oxymeterPic.Visible = true;
+            }
+            else oxymeterPic.Visible = false;
+            if (spirometerCheckBox.Checked)
+            {
+                spirometerPic.Visible = true;
+            }
+            else spirometerPic.Visible = false;
+            if (pulsometerCheckBox.Checked)
+            {
+                pulsometerPic.Visible = true;
+            }
+            else pulsometerPic.Visible = false;
+        }
     }
 }

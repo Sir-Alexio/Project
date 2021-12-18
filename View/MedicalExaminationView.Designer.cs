@@ -34,19 +34,27 @@ namespace View
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.saveResultButton = new System.Windows.Forms.Button();
+            this.showResultButton = new System.Windows.Forms.Button();
+            this.sturtButton = new System.Windows.Forms.Button();
+            this.diagnoseButton = new System.Windows.Forms.Button();
+            this.pulsometerCheckBox = new System.Windows.Forms.CheckBox();
+            this.OximeterCheckBox = new System.Windows.Forms.CheckBox();
+            this.termometerCheckBox = new System.Windows.Forms.CheckBox();
+            this.spirometerCheckBox = new System.Windows.Forms.CheckBox();
             this.infoTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.humanPic = new System.Windows.Forms.PictureBox();
             this.Update = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.hangSensorsButton = new System.Windows.Forms.Button();
+            this.pulsometerPic = new System.Windows.Forms.PictureBox();
+            this.oxymeterPic = new System.Windows.Forms.PictureBox();
+            this.spirometerPic = new System.Windows.Forms.PictureBox();
+            this.termometerPic = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.humanPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pulsometerPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oxymeterPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spirometerPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.termometerPic)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox3
@@ -81,90 +89,81 @@ namespace View
             this.label1.TabIndex = 26;
             this.label1.Text = "Date of examination: ";
             // 
-            // button5
+            // saveResultButton
             // 
-            this.button5.Location = new System.Drawing.Point(741, 578);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(131, 72);
-            this.button5.TabIndex = 25;
-            this.button5.Text = "Save result\r\n";
-            this.button5.UseVisualStyleBackColor = true;
+            this.saveResultButton.Location = new System.Drawing.Point(741, 578);
+            this.saveResultButton.Name = "saveResultButton";
+            this.saveResultButton.Size = new System.Drawing.Size(131, 72);
+            this.saveResultButton.TabIndex = 25;
+            this.saveResultButton.Text = "Save result\r\n";
+            this.saveResultButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // showResultButton
             // 
-            this.button4.Location = new System.Drawing.Point(543, 578);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(131, 72);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "Show result in realtime processing\r\n";
-            this.button4.UseVisualStyleBackColor = true;
+            this.showResultButton.Location = new System.Drawing.Point(543, 578);
+            this.showResultButton.Name = "showResultButton";
+            this.showResultButton.Size = new System.Drawing.Size(131, 72);
+            this.showResultButton.TabIndex = 24;
+            this.showResultButton.Text = "Show result in realtime processing\r\n";
+            this.showResultButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // sturtButton
             // 
-            this.button3.Location = new System.Drawing.Point(634, 492);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(117, 54);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "Start";
-            this.button3.UseVisualStyleBackColor = true;
+            this.sturtButton.Location = new System.Drawing.Point(634, 492);
+            this.sturtButton.Name = "sturtButton";
+            this.sturtButton.Size = new System.Drawing.Size(117, 54);
+            this.sturtButton.TabIndex = 23;
+            this.sturtButton.Text = "Start";
+            this.sturtButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // diagnoseButton
             // 
-            this.button2.Location = new System.Drawing.Point(809, 492);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 54);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Diagnose sensors";
-            this.button2.UseVisualStyleBackColor = true;
+            this.diagnoseButton.Location = new System.Drawing.Point(809, 492);
+            this.diagnoseButton.Name = "diagnoseButton";
+            this.diagnoseButton.Size = new System.Drawing.Size(117, 54);
+            this.diagnoseButton.TabIndex = 22;
+            this.diagnoseButton.Text = "Diagnose sensors";
+            this.diagnoseButton.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // pulsometerCheckBox
             // 
-            this.button1.Location = new System.Drawing.Point(438, 492);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 54);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Hang sensors on the body";
-            this.button1.UseVisualStyleBackColor = true;
+            this.pulsometerCheckBox.AutoSize = true;
+            this.pulsometerCheckBox.Location = new System.Drawing.Point(823, 358);
+            this.pulsometerCheckBox.Name = "pulsometerCheckBox";
+            this.pulsometerCheckBox.Size = new System.Drawing.Size(101, 21);
+            this.pulsometerCheckBox.TabIndex = 20;
+            this.pulsometerCheckBox.Text = "Pulsometer";
+            this.pulsometerCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // OximeterCheckBox
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(823, 358);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(87, 21);
-            this.checkBox4.TabIndex = 20;
-            this.checkBox4.Text = "Sensor 4";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.OximeterCheckBox.AutoSize = true;
+            this.OximeterCheckBox.Location = new System.Drawing.Point(677, 358);
+            this.OximeterCheckBox.Name = "OximeterCheckBox";
+            this.OximeterCheckBox.Size = new System.Drawing.Size(86, 21);
+            this.OximeterCheckBox.TabIndex = 19;
+            this.OximeterCheckBox.Text = "Oximeter";
+            this.OximeterCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // termometerCheckBox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(677, 358);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(87, 21);
-            this.checkBox3.TabIndex = 19;
-            this.checkBox3.Text = "Sensor 3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.termometerCheckBox.AutoSize = true;
+            this.termometerCheckBox.Location = new System.Drawing.Point(397, 358);
+            this.termometerCheckBox.Name = "termometerCheckBox";
+            this.termometerCheckBox.Size = new System.Drawing.Size(115, 21);
+            this.termometerCheckBox.TabIndex = 18;
+            this.termometerCheckBox.Text = "Thermometer";
+            this.termometerCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // spirometerCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(397, 358);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(87, 21);
-            this.checkBox2.TabIndex = 18;
-            this.checkBox2.Text = "Sensor 1";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(543, 358);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(87, 21);
-            this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "Sensor 2";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.spirometerCheckBox.AutoSize = true;
+            this.spirometerCheckBox.Location = new System.Drawing.Point(543, 358);
+            this.spirometerCheckBox.Name = "spirometerCheckBox";
+            this.spirometerCheckBox.Size = new System.Drawing.Size(99, 21);
+            this.spirometerCheckBox.TabIndex = 17;
+            this.spirometerCheckBox.Text = "Spirometer";
+            this.spirometerCheckBox.UseVisualStyleBackColor = true;
             // 
             // infoTextBox
             // 
@@ -176,16 +175,16 @@ namespace View
             this.infoTextBox.Size = new System.Drawing.Size(559, 313);
             this.infoTextBox.TabIndex = 16;
             // 
-            // pictureBox1
+            // humanPic
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(85, 55);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(224, 545);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.humanPic.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.humanPic.Image = ((System.Drawing.Image)(resources.GetObject("humanPic.Image")));
+            this.humanPic.InitialImage = ((System.Drawing.Image)(resources.GetObject("humanPic.InitialImage")));
+            this.humanPic.Location = new System.Drawing.Point(85, 55);
+            this.humanPic.Name = "humanPic";
+            this.humanPic.Size = new System.Drawing.Size(224, 545);
+            this.humanPic.TabIndex = 15;
+            this.humanPic.TabStop = false;
             // 
             // Update
             // 
@@ -197,31 +196,89 @@ namespace View
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
+            // hangSensorsButton
+            // 
+            this.hangSensorsButton.Location = new System.Drawing.Point(417, 492);
+            this.hangSensorsButton.Name = "hangSensorsButton";
+            this.hangSensorsButton.Size = new System.Drawing.Size(117, 54);
+            this.hangSensorsButton.TabIndex = 31;
+            this.hangSensorsButton.Text = "Hang sensors on the body";
+            this.hangSensorsButton.UseVisualStyleBackColor = true;
+            this.hangSensorsButton.Click += new System.EventHandler(this.hangSensorsButton_Click);
+            // 
+            // pulsometerPic
+            // 
+            this.pulsometerPic.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pulsometerPic.Location = new System.Drawing.Point(210, 176);
+            this.pulsometerPic.Name = "pulsometerPic";
+            this.pulsometerPic.Size = new System.Drawing.Size(32, 14);
+            this.pulsometerPic.TabIndex = 32;
+            this.pulsometerPic.TabStop = false;
+            this.pulsometerPic.Visible = false;
+            // 
+            // oxymeterPic
+            // 
+            this.oxymeterPic.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.oxymeterPic.Location = new System.Drawing.Point(267, 311);
+            this.oxymeterPic.Name = "oxymeterPic";
+            this.oxymeterPic.Size = new System.Drawing.Size(31, 14);
+            this.oxymeterPic.TabIndex = 33;
+            this.oxymeterPic.TabStop = false;
+            this.oxymeterPic.Visible = false;
+            // 
+            // spirometerPic
+            // 
+            this.spirometerPic.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.spirometerPic.Location = new System.Drawing.Point(161, 120);
+            this.spirometerPic.Name = "spirometerPic";
+            this.spirometerPic.Size = new System.Drawing.Size(33, 16);
+            this.spirometerPic.TabIndex = 34;
+            this.spirometerPic.TabStop = false;
+            this.spirometerPic.Visible = false;
+            // 
+            // termometerPic
+            // 
+            this.termometerPic.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.termometerPic.Location = new System.Drawing.Point(252, 199);
+            this.termometerPic.Name = "termometerPic";
+            this.termometerPic.Size = new System.Drawing.Size(31, 14);
+            this.termometerPic.TabIndex = 35;
+            this.termometerPic.TabStop = false;
+            this.termometerPic.Visible = false;
+            // 
             // MedicalExaminationView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(971, 721);
+            this.Controls.Add(this.termometerPic);
+            this.Controls.Add(this.spirometerPic);
+            this.Controls.Add(this.oxymeterPic);
+            this.Controls.Add(this.pulsometerPic);
+            this.Controls.Add(this.hangSensorsButton);
             this.Controls.Add(this.Update);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.saveResultButton);
+            this.Controls.Add(this.showResultButton);
+            this.Controls.Add(this.sturtButton);
+            this.Controls.Add(this.diagnoseButton);
+            this.Controls.Add(this.pulsometerCheckBox);
+            this.Controls.Add(this.OximeterCheckBox);
+            this.Controls.Add(this.termometerCheckBox);
+            this.Controls.Add(this.spirometerCheckBox);
             this.Controls.Add(this.infoTextBox);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.humanPic);
             this.Name = "MedicalExaminationView";
             this.Text = "MedicalExaminationView";
             this.Load += new System.EventHandler(this.MedicalExaminationView_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.humanPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pulsometerPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oxymeterPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spirometerPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.termometerPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,17 +290,21 @@ namespace View
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button saveResultButton;
+        private System.Windows.Forms.Button showResultButton;
+        private System.Windows.Forms.Button sturtButton;
+        private System.Windows.Forms.Button diagnoseButton;
+        private System.Windows.Forms.CheckBox pulsometerCheckBox;
+        private System.Windows.Forms.CheckBox OximeterCheckBox;
+        private System.Windows.Forms.CheckBox termometerCheckBox;
+        private System.Windows.Forms.CheckBox spirometerCheckBox;
         private System.Windows.Forms.TextBox infoTextBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox humanPic;
         private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.Button hangSensorsButton;
+        private System.Windows.Forms.PictureBox pulsometerPic;
+        private System.Windows.Forms.PictureBox oxymeterPic;
+        private System.Windows.Forms.PictureBox spirometerPic;
+        private System.Windows.Forms.PictureBox termometerPic;
     }
 }
