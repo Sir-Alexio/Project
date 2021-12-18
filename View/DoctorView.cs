@@ -28,7 +28,7 @@ namespace View
 
         private void Doctor_Load(object sender, EventArgs e)
         {
-
+            this.ControlBox = false;
         }
 
         private void startMadicalExaminationButton_Click(object sender, EventArgs e)

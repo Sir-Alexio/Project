@@ -23,7 +23,7 @@ namespace View
 
         private void NewExaminationView_Load(object sender, EventArgs e)
         {
-
+            this.ControlBox = false;
         }
 
         private void typesOfMuscleLoading_SelectedIndexChanged(object sender, EventArgs e)
@@ -39,6 +39,11 @@ namespace View
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            if (listOfPatients.Items.Count == 0)
+            {
+                MessageBox.Show("No patients!");
+                return;
+            }
             string stringListOfSensors = "";
             if (temperatureCheckBox.Checked)
             {

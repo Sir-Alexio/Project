@@ -65,6 +65,12 @@
     <Compile Include="DoctorView.Designer.cs">
       <DependentUpon>DoctorView.cs</DependentUpon>
     </Compile>
+    <Compile Include="GraphicView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphicView.Designer.cs">
+      <DependentUpon>GraphicView.cs</DependentUpon>
+    </Compile>
     <Compile Include="MedicalExaminationView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorView.resx">
       <DependentUpon>DoctorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicView.resx">
+      <DependentUpon>GraphicView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MedicalExaminationView.resx">
       <DependentUpon>MedicalExaminationView.cs</DependentUpon>

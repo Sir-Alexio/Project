@@ -17,7 +17,7 @@ namespace View
        
         private void NewPatientView_Load(object sender, EventArgs e)
         {
-
+            this.ControlBox = false;
         }
 
         private void nameTextBox_TextChanged(object sender, EventArgs e)

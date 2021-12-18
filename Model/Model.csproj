@@ -55,6 +55,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -67,6 +68,7 @@
     <Compile Include="DataBase\Connection.cs" />
     <Compile Include="Entities\Examination.cs" />
     <Compile Include="DataBase\ExaminationDB.cs" />
+    <Compile Include="Graphic.cs" />
     <Compile Include="Interfaces\IConnection.cs" />
     <Compile Include="Interfaces\IToStringList.cs" />
     <Compile Include="DataBase\PatientsDB.cs" />

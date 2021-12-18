@@ -62,6 +62,7 @@ namespace View
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Doctor);
             this.Controls.Add(this.Administrator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AuthorizationView";
             this.Text = "Authorization";
             this.Load += new System.EventHandler(this.Authorization_Load);

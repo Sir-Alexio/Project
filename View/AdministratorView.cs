@@ -21,7 +21,7 @@ namespace View
 
         private void Administrator_Load(object sender, EventArgs e)
         {
-
+            this.ControlBox = false;
         }
 
         private void listOfPatients_SelectedIndexChanged(object sender, EventArgs e)

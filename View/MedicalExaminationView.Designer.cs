@@ -50,6 +50,7 @@ namespace View
             this.oxymeterPic = new System.Windows.Forms.PictureBox();
             this.spirometerPic = new System.Windows.Forms.PictureBox();
             this.termometerPic = new System.Windows.Forms.PictureBox();
+            this.backButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.humanPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pulsometerPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oxymeterPic)).BeginInit();
@@ -115,6 +116,7 @@ namespace View
             this.sturtButton.TabIndex = 23;
             this.sturtButton.Text = "Start";
             this.sturtButton.UseVisualStyleBackColor = true;
+            this.sturtButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // diagnoseButton
             // 
@@ -124,6 +126,7 @@ namespace View
             this.diagnoseButton.TabIndex = 22;
             this.diagnoseButton.Text = "Diagnose sensors";
             this.diagnoseButton.UseVisualStyleBackColor = true;
+            this.diagnoseButton.Click += new System.EventHandler(this.diagnoseButton_Click);
             // 
             // pulsometerCheckBox
             // 
@@ -208,7 +211,7 @@ namespace View
             // 
             // pulsometerPic
             // 
-            this.pulsometerPic.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pulsometerPic.BackColor = System.Drawing.SystemColors.GrayText;
             this.pulsometerPic.Location = new System.Drawing.Point(210, 176);
             this.pulsometerPic.Name = "pulsometerPic";
             this.pulsometerPic.Size = new System.Drawing.Size(32, 14);
@@ -218,7 +221,7 @@ namespace View
             // 
             // oxymeterPic
             // 
-            this.oxymeterPic.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.oxymeterPic.BackColor = System.Drawing.SystemColors.GrayText;
             this.oxymeterPic.Location = new System.Drawing.Point(267, 311);
             this.oxymeterPic.Name = "oxymeterPic";
             this.oxymeterPic.Size = new System.Drawing.Size(31, 14);
@@ -228,7 +231,7 @@ namespace View
             // 
             // spirometerPic
             // 
-            this.spirometerPic.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.spirometerPic.BackColor = System.Drawing.SystemColors.GrayText;
             this.spirometerPic.Location = new System.Drawing.Point(161, 120);
             this.spirometerPic.Name = "spirometerPic";
             this.spirometerPic.Size = new System.Drawing.Size(33, 16);
@@ -238,7 +241,7 @@ namespace View
             // 
             // termometerPic
             // 
-            this.termometerPic.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.termometerPic.BackColor = System.Drawing.SystemColors.GrayText;
             this.termometerPic.Location = new System.Drawing.Point(252, 199);
             this.termometerPic.Name = "termometerPic";
             this.termometerPic.Size = new System.Drawing.Size(31, 14);
@@ -246,11 +249,22 @@ namespace View
             this.termometerPic.TabStop = false;
             this.termometerPic.Visible = false;
             // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(49, 649);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(81, 39);
+            this.backButton.TabIndex = 36;
+            this.backButton.Text = "back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // MedicalExaminationView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(971, 721);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.termometerPic);
             this.Controls.Add(this.spirometerPic);
             this.Controls.Add(this.oxymeterPic);
@@ -306,5 +320,6 @@ namespace View
         private System.Windows.Forms.PictureBox oxymeterPic;
         private System.Windows.Forms.PictureBox spirometerPic;
         private System.Windows.Forms.PictureBox termometerPic;
+        private System.Windows.Forms.Button backButton;
     }
 }

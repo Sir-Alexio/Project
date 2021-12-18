@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model;
@@ -66,6 +67,16 @@ namespace Presentor
         public void CloseView()
         {
             _currentView.Visible = false;
+        }
+
+        public bool isSensorWork()
+        {
+            Random flag = new Random();
+
+            Thread.Sleep(100);
+
+            if (flag.NextDouble() < 0.15) return false;
+            else return true;
         }
     }
 }

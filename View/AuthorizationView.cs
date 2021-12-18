@@ -24,7 +24,7 @@ namespace View
 
         private void Authorization_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Administrator_Click(object sender, EventArgs e)
