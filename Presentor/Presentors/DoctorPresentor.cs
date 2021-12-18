@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using Model.Entities;
 using Model;
-
+using System;
 
 namespace Presentor
 {
@@ -19,11 +19,13 @@ namespace Presentor
         public List<string> getStringListOfExaminations()
         {
             stringExaminations.Clear();
-
+           
+            stringExaminations.Add("ID".PadRight(10)+"Type of muscle loading:".PadRight(50)+"Date of Examenation:");
+            
             foreach (Examination examination in ExaminationDB.getListOfExaminations())
             {
-                string stringPatient = examination.id.ToString().PadRight(2) +
-                            examination.typeOfMuscleLoading.PadRight(20) +
+                string stringPatient = examination.id.ToString().PadRight(10) +
+                            examination.typeOfMuscleLoading.PadRight(60) +
                             examination.dateOfExamination;
 
                 stringExaminations.Add(stringPatient);
@@ -40,5 +42,15 @@ namespace Presentor
         {
             _currentForm.Visible = true;
         }
+
+        public void findId(string examination)
+        {
+            int id = 0;
+
+            Int32.TryParse(examination[0] + examination[1].ToString(), out id);
+
+            MedicalExaminationPresentor.id = id;
+        }
+        
     }
 }

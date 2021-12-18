@@ -30,6 +30,7 @@ namespace Presentor
         {
             stringPatients.Clear();
 
+            stringPatients.Add("ID".PadRight(2)+"Name:".PadRight(20)+"Surname:".PadRight(20)+"Sex:".PadRight(20)+"Date of birth:");
             foreach (Patient patient in PatientsDB.getListOfPatients())
             {
                 string stringPatient = patient.id.ToString().PadRight(2) +

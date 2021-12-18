@@ -42,19 +42,19 @@ namespace View
             string stringListOfSensors = "";
             if (temperatureCheckBox.Checked)
             {
-                stringListOfSensors += "Temperature ";
+                stringListOfSensors += "temperature  ";
             }
             if (pulseCheckBox.Checked)
             {
-                stringListOfSensors += "Pulse ";
+                stringListOfSensors += "pulse  ";
             }
             if (breathongCheckBox.Checked)
             {
-                stringListOfSensors += "Breathing ";
+                stringListOfSensors += "breathing  ";
             }
             if (oxygenLevelCheckBox.Checked)
             {
-                stringListOfSensors += "Oxygen Level ";
+                stringListOfSensors += "oxygen level  ";
             }
         
             

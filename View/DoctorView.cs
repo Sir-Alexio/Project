@@ -34,6 +34,9 @@ namespace View
         private void startMadicalExaminationButton_Click(object sender, EventArgs e)
         {
             medicalExaminationPresentor.ShowView();
+            doctorPresentor.findId(listOfExaminations.SelectedItem.ToString());
+            
+            
         }
 
         private void backButton_Click(object sender, EventArgs e)

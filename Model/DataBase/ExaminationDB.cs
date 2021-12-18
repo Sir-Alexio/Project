@@ -67,5 +67,17 @@ namespace Model
 
 
         }
+
+        public static Examination getInfoById(int id)
+        {
+            foreach (Examination examination in examinations)
+            {
+                if (examination.id == id)
+                {
+                    return examination;
+                }
+            }
+            return new Examination();
+        }
     }
 }
