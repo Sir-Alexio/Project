@@ -5,7 +5,7 @@ using Model.Entities;
 
 namespace Presentor
 {
-    public class AdministratorPresentor:IView,IToStringList
+    public class AdministratorPresentor:IPresenter,IToStringList
     {
         private Form _currentView;
 

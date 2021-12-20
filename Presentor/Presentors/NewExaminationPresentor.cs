@@ -9,7 +9,7 @@ using Model.Entities;
 
 namespace Presentor
 {
-    public class NewExaminationPresentor : IView, IToStringList
+    public class NewExaminationPresentor : IPresenter, IToStringList
     {
         private readonly Form _currentForm;
 

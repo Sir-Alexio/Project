@@ -10,7 +10,7 @@ using Model.Entities;
 
 namespace Presentor
 {
-    public class MedicalExaminationPresentor:IView
+    public class MedicalExaminationPresentor:IPresenter
     {
         private Form _currentView;
         public static int id { get; set; }

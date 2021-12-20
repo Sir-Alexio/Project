@@ -6,7 +6,7 @@ using System;
 
 namespace Presentor
 {
-    public class DoctorPresentor : IView
+    public class DoctorPresentor : IPresenter
     {
         private readonly Form _currentForm;
 

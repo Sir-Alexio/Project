@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Presentor
 {
-    public class AuthorizationPresentor: IView
+    public class AuthorizationPresentor: IPresenter
     {
         public Form _currentView { get; }
 

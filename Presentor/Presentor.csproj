@@ -48,7 +48,7 @@
     <Compile Include="Presentors\AdministratorPresentor.cs" />
     <Compile Include="Presentors\DoctorPresentor.cs" />
     <Compile Include="Interfaces\INewPatientView.cs" />
-    <Compile Include="Interfaces\IView.cs" />
+    <Compile Include="Interfaces\IPresenter.cs" />
     <Compile Include="Presentors\AuthorizationPresentor.cs" />
     <Compile Include="Presentors\GraphicPresentor.cs" />
     <Compile Include="Presentors\MedicalExaminationPresentor.cs" />

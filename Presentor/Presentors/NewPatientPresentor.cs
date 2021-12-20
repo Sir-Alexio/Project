@@ -9,7 +9,7 @@ using Model;
 
 namespace Presentor
 {
-    public class NewPatientPresentor : IView
+    public class NewPatientPresentor : IPresenter
     {
         private readonly Form _currentForm;
 
