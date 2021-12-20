@@ -109,7 +109,6 @@ namespace View
         private void startButton_Click(object sender, EventArgs e)
         {
             graphicPresentor.ShowView();
-            //graphicPresentor.showGraphic();
         }
 
         private void backButton_Click(object sender, EventArgs e)

@@ -68,7 +68,6 @@
     <Compile Include="DataBase\Connection.cs" />
     <Compile Include="Entities\Examination.cs" />
     <Compile Include="DataBase\ExaminationDB.cs" />
-    <Compile Include="Graphic.cs" />
     <Compile Include="Interfaces\IConnection.cs" />
     <Compile Include="Interfaces\IToStringList.cs" />
     <Compile Include="DataBase\PatientsDB.cs" />
